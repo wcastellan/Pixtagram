@@ -1,9 +1,3 @@
-DROP DATABASE IF EXISTS nodeapp;
+DROP DATABASE IF EXISTS image_db;
 
-CREATE DATABASE nodeapp;
-USE nodeapp;
-
-CREATE TABLE `images` (
-    `id` int(10) UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `image_name` varchar(255) DEFAULT NULL
-);
+CREATE DATABASE image_db;
