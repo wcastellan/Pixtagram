@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixtagram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1 id="logo">
+        <a href="/">Pixtagram</a>
+      </h1>
+      <nav class="navbar">
+        
+        <input type="text" id="navbar-search" size="40" placeholder="Search accounts">
+        <a href="/upload">Upload</a>
+        <button id="logout">Log Out</button>
+        <div class="dropdown">
+          <button class="dropbtn">...</button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        
+        <button id="login"><a href="/login" id="login-link">Log In</a></button>
+        
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      &copy; 2022 Pixtagram, Inc.
+    </footer>
+  </div>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
