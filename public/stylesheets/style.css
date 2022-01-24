@@ -18,12 +18,20 @@ input {
   height: 37px;
 }
 
+ul, ol {
+  list-style-type: none;
+}
+
 .btn {
   height: 37px;
   background-color: red;
   border: 1px solid red;
   border-radius: 5px;
   color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 /* WRAPPER containing all Main template */
@@ -177,6 +185,28 @@ header {
 
 #signup-btn, #login-btn {
   width: 250px;
+}
+
+/* WRAPPER containing Dashboard template */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 125px 0;
+}
+
+.dashboard-users {
+  width: 20%;
+  border: 1px solid rgba(211, 211, 211, 0.74);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 25px;
+}
+
+#dashboard-loggedin-user {
+  border-bottom: 1px solid rgba(211, 211, 211, 0.74);
 }
 
 /* FOOTER */
