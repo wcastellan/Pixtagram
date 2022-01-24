@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Wrapper containing all template */
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2%;
+}
+
+/* Pixtagram logo */
+#logo {
+  font-family: 'Pacifico', cursive;
+}
+
+/* Container for Navigation Bar in Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Search Field */
+#navbar-search {
+  margin: 0 20px;
+  background-color: lightgray;
+  border-radius: 5px;
+  border: 1px solid lightslategray;
+  padding: 5px;
+}
+
+/* Logout Button */
+#logout {
+  padding: 5px;
+  margin: 0 20px;
+  background-color: red;
+  border-radius: 5px;
+  border: red;
+  color: white;
+}
+
+#logout:hover {
+  cursor: pointer;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  cursor: pointer;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Login Button */
+#login {
+  padding: 5px;
+  margin-left: 20px;
+  background-color: red;
+  border-radius: 5px;
+  border: red;
+}
+
+/* Login Button Text */
+#login-link {
+  color: white;
+}
