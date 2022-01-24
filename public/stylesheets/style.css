@@ -14,7 +14,19 @@ a {
   color: black;
 }
 
-/* Wrapper containing all template */
+input {
+  height: 37px;
+}
+
+.btn {
+  height: 37px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: white;
+}
+
+/* WRAPPER containing all Main template */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -128,4 +140,49 @@ header {
 /* Login Button Text */
 #login-link {
   color: white;
+}
+
+/* WRAPPER containing all Login template */
+.login-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 125px 0;
+}
+
+.signup-form, .login-form {
+  border: 1px solid rgba(211, 211, 211, 0.74);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 25px;
+}
+
+#logo span {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  justify-content: space-between;
+}
+
+.text-field {
+  border: 1px solid rgba(211, 211, 211, 0.74);
+  border-radius: 5px;
+  width: 250px;
+  margin-bottom: 7px;
+}
+
+#signup-btn, #login-btn {
+  width: 250px;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
 }
