@@ -37,6 +37,9 @@ User.init(
       validate: {
         len: [4]
       }
+    },
+    cloudinary_id: {
+      type: DataTypes.STRING
     }
   },
   {
