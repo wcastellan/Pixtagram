@@ -20,6 +20,7 @@ input {
 
 ul, ol {
   list-style-type: none;
+  padding: 0px;
 }
 
 .btn {
@@ -202,11 +203,34 @@ header {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
-  padding: 25px;
+  
 }
 
 #dashboard-loggedin-user {
   border-bottom: 1px solid rgba(211, 211, 211, 0.74);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+#dashboard-users-list {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-pic-feed {
+  width: 50%;
+  border: 1px solid rgba(211, 211, 211, 0.74);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#feed-pic {
+  max-width: 45%;
+  max-height: 45%;
 }
 
 /* FOOTER */

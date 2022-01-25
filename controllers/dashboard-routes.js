@@ -3,9 +3,31 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
+// get all users
+router.get('/', (req, res) => {
+  console.log('===========================')
+  
+  User.findAll({
+    
+    attributes: [
+      'id',
+      'username'
+    ]
+  })
+    .then(dbUserData => {
+      const users = dbUserData.map(post => post.get({ plain: true }));
+      res.render('dashboard', { users, loggedIn: true });
+    })
+    
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
 // get all posts for dashboard
 router.get('/', withAuth, (req, res) => {
-  console.log(req.session);
+  
   console.log('======================');
   Post.findAll({
     where: {
@@ -43,7 +65,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+/*router.get('/edit/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: [
       'id',
@@ -82,7 +104,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .catch(err => {
       res.status(500).json(err);
     });
-});
+});*/
 
 
 
