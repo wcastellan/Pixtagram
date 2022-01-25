@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const Upload = require('../models/upload');
-const cloudinary = require('../utils/cloudinary');
-const upload = require('../utils/multer');
+const Upload = require('../../models/Upload');
+const cloudinary = require('../../utils/cloudinary');
+const upload = require('../../utils/multer');
 
 // post request
 router.post('/', upload.single('image'), async (req, res) => {
@@ -9,6 +9,8 @@ router.post('/', upload.single('image'), async (req, res) => {
         // upload image to cloudinary
         const result = await cloudinary.uploader.upload(req.file.path)
         // create new upload
+        console.log(result)
+        
         let upload = new Upload({
             name: req.body.name,
             avatar: result.secure_url,
@@ -24,7 +26,12 @@ router.post('/', upload.single('image'), async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        let upload = await Upload.find();
+        let upload = await Upload.findOne({
+            where: {
+                id: req.params.id
+            }
+        });
+
         res.json(upload);
     } catch (err) {
         console.log(err);
