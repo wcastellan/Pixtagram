@@ -1,31 +1,24 @@
 <div class="dashboard-wrapper">
   <section class="dashboard-users">
+    {{#if loggedIn}}
     <div id="dashboard-loggedin-user">
       <a href="/users/{{user.id}}">{{user.username}}userA</a>
     </div>
-    
+    {{/if}}
+
+    {{#if users.length}}
     <div id="dashboard-users-list">
       <ul>
+        {{#each users as |user|}}
+        <li>
+          {{> user-info user}}
+          <a href="/users/{{user.id}}">{{user.username}}</a>
+        </li>
+        {{/each}}
         
-        <li>
-          
-          <a href="/users/{{user.id}}">{{user.username}}user1</a>
-        </li>
-        <li>
-          user2
-        </li>
-        <li>
-          user3
-        </li>
-        <li>
-          user4
-        </li>
-        <li>
-          user5
-        </li>
       </ul>
     </div>
-    
+    {{/if}}
   </section>
 
   
