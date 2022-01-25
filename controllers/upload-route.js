@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Upload } = require('../models');
+const Upload = require('../models/upload');
 const cloudinary = require('../utils/cloudinary');
 const upload = require('../utils/multer');
 
@@ -22,7 +22,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     }
 })
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         let upload = await Upload.find();
         res.json(upload);
@@ -53,7 +53,7 @@ router.put('/:id', upload.single('image'), async(req, res) => {
         const data = {
             name: req.body.name || upload.name,
             avatar: result.secure_url || upload.avatar,
-            cloudinary_id: result.public_id || User.cloudinary_id
+            cloudinary_id: result.public_id || upload.cloudinary_id
         };
         upload = await Upload.findByIdAndUpdate(req.params.id, data, {
             new: true
