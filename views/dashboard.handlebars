@@ -1,11 +1,11 @@
 <div class="dashboard-wrapper">
   <section class="dashboard-users">
-    {{#if loggedIn}}
-    <div id="dashboard-loggedin-user">
-      <a href="/users/{{user.id}}">{{user.username}}userA</a>
+    
+    <div id="dashboard-users-list-heading">
+      <h3 id="logo">
+        Friends
+      </h3>
     </div>
-    {{/if}}
-
     {{#if users.length}}
     <div id="dashboard-users-list">
       <ul>
@@ -15,7 +15,6 @@
           <a href="/users/{{user.id}}">{{user.username}}</a>
         </li>
         {{/each}}
-        
       </ul>
     </div>
     {{/if}}

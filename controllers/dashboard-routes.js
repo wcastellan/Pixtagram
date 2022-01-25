@@ -6,13 +6,14 @@ const withAuth = require('../utils/auth');
 // get all users
 router.get('/', (req, res) => {
   console.log('===========================')
-  console.log(req.session.username);
+  console.log(req.session);
   User.findAll({
     
     attributes: [
       'id',
       'username'
-    ]
+    ],
+    order: [['username', 'ASC']]
   })
     .then(dbUserData => {
       const users = dbUserData.map(post => post.get({ plain: true }));

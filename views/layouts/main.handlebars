@@ -18,7 +18,7 @@
         <a href="/">Pixtagram</a>
       </h1>
       <nav class="navbar">
-        
+        {{#if loggedIn}}
         <input type="text" id="navbar-search" size="40" placeholder="Search accounts">
         <a href="/upload">Upload</a>
         <button class="btn" id="logout">Log Out</button>
@@ -30,9 +30,9 @@
             <a href="#">Link 3</a>
           </div>
         </div>
-        
+        {{else}}
         <button class="btn" id="login"><a href="/login" id="login-link">Log In</a></button>
-        
+        {{/if}}
       </nav>
     </header>
     <main>
