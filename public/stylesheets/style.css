@@ -9,6 +9,10 @@ body, html {
   font-family: sans-serif;
 }
 
+main {
+  background-color: lightgray;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -18,12 +22,21 @@ input {
   height: 37px;
 }
 
+ul, ol {
+  list-style-type: none;
+  padding: 0px;
+}
+
 .btn {
   height: 37px;
   background-color: red;
   border: 1px solid red;
   border-radius: 5px;
   color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 /* WRAPPER containing all Main template */
@@ -40,7 +53,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2%;
+  padding: 0 100px;
 }
 
 /* Pixtagram logo */
@@ -150,7 +163,7 @@ header {
 }
 
 .signup-form, .login-form {
-  border: 1px solid rgba(211, 211, 211, 0.74);
+  border: 1px solid black;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -169,7 +182,7 @@ header {
 }
 
 .text-field {
-  border: 1px solid rgba(211, 211, 211, 0.74);
+  border: 1px solid black;
   border-radius: 5px;
   width: 250px;
   margin-bottom: 7px;
@@ -177,6 +190,58 @@ header {
 
 #signup-btn, #login-btn {
   width: 250px;
+}
+
+/* WRAPPER containing Dashboard template */
+.dashboard-wrapper {
+  display: flex;
+  justify-content: space-around;
+  padding: 125px 0;
+}
+
+.dashboard-users {
+  width: 15%;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#dashboard-users-list-heading {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+#dashboard-users-list {
+  display: flex;
+  justify-content: center;
+}
+
+#dashboard-users-list ul li {
+  padding-bottom: 7px;
+}
+
+#dashboard-users-list ul li a {
+  color: blue;
+}
+
+.dashboard-pic-feed {
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#feed-pic {
+  max-width: 45%;
+  max-height: 45%;
 }
 
 /* FOOTER */
