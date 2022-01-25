@@ -38,9 +38,6 @@ User.init(
         len: [4]
       }
     },
-    cloudinary_id: {
-      type: DataTypes.STRING
-    }
   },
   {
     hooks: {
