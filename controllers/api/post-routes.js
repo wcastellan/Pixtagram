@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote } = require('../../models');
+const { Post, User, Comment, Vote, Upload } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all posts
@@ -26,6 +26,10 @@ router.get('/', (req, res) => {
       {
         model: User,
         attributes: ['username']
+      },
+      {
+        model: Upload,
+        attributes: ['cloudinary_id']
       }
     ]
   })
@@ -61,6 +65,10 @@ router.get('/:id', (req, res) => {
       {
         model: User,
         attributes: ['username']
+      },
+      {
+        model: Upload,
+        attributes: ['cloudinary_id']
       }
     ]
   })
