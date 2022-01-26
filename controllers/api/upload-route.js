@@ -22,7 +22,7 @@ router.post('/', upload.single('image'), async (req, res) => {
     } catch (err) {
         console.log(err)
     }
-})
+});
 
 router.get('/:id', async (req, res) => {
     try {

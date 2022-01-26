@@ -12,13 +12,13 @@ Upload.init(
             autoIncrement: true
         },
         name: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         avatar: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         },
         cloudinary_id: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
         }
     },
     {
