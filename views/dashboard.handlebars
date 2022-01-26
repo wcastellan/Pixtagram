@@ -31,18 +31,26 @@
         <br>
         you commented "The other half must be really bad"
       </li>
-      <li>
-        
-      </li>
-      <li>
-        
-      </li>
-      <li>
-        
-      </li>
     </ol>
+    {{#if loggedIn}}
+    <form class="comment-form">
+      <div>
+        <textarea name="comment-body"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">add comment</button>
+        <button type="button" class="upvote-btn">upvote</button>
+      </div>
+    </form>
+    {{/if}}
+
+    {{> comments user.comments}}
   </section>
   
 </div>
 
 <script src="/javascript/add-post.js"></script>
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
