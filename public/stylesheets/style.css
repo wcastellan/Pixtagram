@@ -196,7 +196,7 @@ header {
 .dashboard-wrapper {
   display: flex;
   justify-content: space-around;
-  padding: 125px 0;
+  padding: 75px 0 125px 0;
 }
 
 .dashboard-users {
@@ -231,7 +231,7 @@ header {
 
 .dashboard-pic-feed {
   width: 60%;
-  border: 1px solid black;
+  
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -242,6 +242,8 @@ header {
 #feed-pic {
   max-width: 45%;
   max-height: 45%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* FOOTER */
