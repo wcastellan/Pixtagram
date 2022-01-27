@@ -25,20 +25,32 @@
     <ol>
       
       <li id="feed-pic">
-        pic1
-      </li>
-      <li>
-        pic2
-      </li>
-      <li>
-        pic3
-      </li>
-      <li>
-        pic4
+        user posted on Jan 26, 2022
+        <img src="/images/test-one.jpg" height="500" width="500">
+        alien commented "What a creep!"
+        <br>
+        you commented "The other half must be really bad"
       </li>
     </ol>
+    {{#if loggedIn}}
+    <form class="comment-form">
+      <div>
+        <textarea name="comment-body"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">add comment</button>
+        <button type="button" class="upvote-btn">upvote</button>
+      </div>
+    </form>
+    {{/if}}
+
+    {{> comments user.comments}}
   </section>
   
 </div>
 
 <script src="/javascript/add-post.js"></script>
+
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/upvote.js"></script>
