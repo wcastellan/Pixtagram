@@ -2,15 +2,17 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
+  
 }
 
 main {
-  background-color: lightgray;
+  
+  height: 100%;
 }
 
 a {
@@ -38,6 +40,8 @@ ul, ol {
 .btn:hover {
   cursor: pointer;
 }
+
+
 
 /* WRAPPER containing all Main template */
 .wrapper {
@@ -153,6 +157,66 @@ header {
 /* Login Button Text */
 #login-link {
   color: white;
+}
+
+/* Landing Page ("Welcome") template */
+#landing-page {
+  width: 100%;
+  min-height: 650px;
+  background-image: url('../images/landing-page.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#landing-page-text p {
+  margin: 0;
+  color: white;
+}
+
+.lpt {
+  padding-bottom: 25px;
+}
+
+#lpt-one {
+  padding-top: 25px;
+  padding-left: 650px;
+}
+
+#lpt-two {
+  padding-left: 750px;
+}
+
+#lpt-three {
+  padding-left: 775px;
+}
+
+#lpt-four {
+  padding-left: 600px;
+}
+
+#lpt-five {
+  padding-left: 550px;
+}
+
+#lpt-six {
+  padding-left: 525px;
+}
+
+#lpt-seven {
+  padding-left: 425px;
+}
+
+#lpt-eight {
+  padding-left: 270px;
+}
+
+#lpt-nine {
+  padding-top: 25px;
+  padding-left: 900px
+}
+
+#lpt-login {
+  color: red;
 }
 
 /* WRAPPER containing all Login template */
