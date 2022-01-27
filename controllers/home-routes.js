@@ -3,13 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Vote } = require('../models');
 
 // get all posts for homepage
-
 router.get('/', (req, res) => {
-  res.render('welcome');
-})
-
-
-/*router.get('/', (req, res) => {
   console.log('======================');
   Post.findAll({
     attributes: [
@@ -93,7 +87,7 @@ router.get('/post/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-});*/
+});
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
