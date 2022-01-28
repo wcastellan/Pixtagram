@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body, html {
+html, body {
   height: 100%;
   padding: 0;
   margin: 0;
@@ -10,7 +10,7 @@ body, html {
 }
 
 main {
-  background-color: lightgray;
+  height: 100%;
 }
 
 a {
@@ -39,6 +39,8 @@ ul, ol {
   cursor: pointer;
 }
 
+
+
 /* WRAPPER containing all Main template */
 .wrapper {
   width: 100%;
@@ -51,7 +53,7 @@ ul, ol {
 header {
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0 100px;
 }
@@ -155,10 +157,71 @@ header {
   color: white;
 }
 
+/* Landing Page ("Welcome") template */
+#landing-page {
+  width: 100%;
+  min-height: 650px;
+  background-image: url('../images/landing-page.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+#landing-page-text p {
+  margin: 0;
+  color: white;
+}
+
+.lpt {
+  padding-bottom: 25px;
+}
+
+#lpt-one {
+  padding-top: 25px;
+  padding-left: 650px;
+}
+
+#lpt-two {
+  padding-left: 750px;
+}
+
+#lpt-three {
+  padding-left: 775px;
+}
+
+#lpt-four {
+  padding-left: 600px;
+}
+
+#lpt-five {
+  padding-left: 550px;
+}
+
+#lpt-six {
+  padding-left: 525px;
+}
+
+#lpt-seven {
+  padding-left: 425px;
+}
+
+#lpt-eight {
+  padding-left: 270px;
+}
+
+#lpt-nine {
+  padding-top: 25px;
+  padding-left: 900px
+}
+
+#lpt-login {
+  color: red;
+}
+
 /* WRAPPER containing all Login template */
 .login-wrapper {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 125px 0;
 }
 
@@ -170,6 +233,13 @@ header {
   align-items: stretch;
   justify-content: center;
   padding: 25px;
+  opacity: 0.7;
+  margin: 25px;
+}
+
+.signup-form:hover, .login-form:hover {
+  opacity: 1;
+  transition: opacity .3s;
 }
 
 #logo span {
@@ -195,18 +265,18 @@ header {
 /* WRAPPER containing Dashboard template */
 .dashboard-wrapper {
   display: flex;
+  justify-content: center;
   justify-content: space-around;
   padding: 75px 0 125px 0;
 }
 
 .dashboard-users {
   width: 15%;
-  border: 1px solid black;
-  border-radius: 5px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0 20px;
+  align-items: flex-start;
 }
 
 #dashboard-users-list-heading {
@@ -226,17 +296,17 @@ header {
 }
 
 #dashboard-users-list ul li a {
-  color: blue;
+  color: red;
 }
 
 .dashboard-pic-feed {
   width: 60%;
-  
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+  margin: 0 20px;
 }
 
 #feed-pic {
