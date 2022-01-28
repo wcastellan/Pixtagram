@@ -23,6 +23,7 @@
 
   ## Links
   **GitHub**: https://github.com/wcastellan/Pixtagram
+  <br>
   **Heroku**: https://fierce-journey-71940.herokuapp.com/
 
   ## Contribution:
