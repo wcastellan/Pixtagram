@@ -274,7 +274,6 @@ header {
 .dashboard-wrapper {
   display: flex;
   justify-content: center;
-  justify-content: space-around;
   padding: 75px 0 125px 0;
 }
 
@@ -308,7 +307,6 @@ header {
 }
 
 .dashboard-pic-feed {
-  width: 60%;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -322,6 +320,18 @@ header {
   max-height: 45%;
   display: flex;
   flex-direction: column;
+}
+
+#comment-body {
+  width: 100%;
+  height: 50px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
 }
 
 /* FOOTER */

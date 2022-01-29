@@ -4,28 +4,28 @@ const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 
-// // get all users
-// router.get('/', (req, res) => {
-//   console.log('===========================')
-//   console.log(req.session);
-//   User.findAll({
+// get all users
+router.get('/', (req, res) => {
+  console.log('===========================')
+  console.log(req.session);
+  User.findAll({
     
-//     attributes: [
-//       'id',
-//       'username'
-//     ],
-//     order: [['username', 'ASC']]
-//   })
-//     .then(dbUserData => {
-//       const users = dbUserData.map(post => post.get({ plain: true }));
-//       res.render('dashboard', { users, loggedIn: true });
-//     })
-    
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+    attributes: [
+      'id',
+      'username'
+    ],
+    order: [['username', 'ASC']]
+  })
+    .then(dbUserData => {
+      const users = dbUserData.map(post => post.get({ plain: true }));
+      res.render('dashboard', { users, loggedIn: true });
+    })
+   
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // find one user
 router.get('/:id', (req, res) => {
