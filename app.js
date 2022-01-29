@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3001;
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const Upload = require('./controllers/api/upload-routes');
+const Upload = require('./controllers/api/index');
 
 const sess = {
     secret: 'Super secret secret',
@@ -35,7 +35,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('./models/Upload', Upload);
+app.use('/api', Upload);
 
 app.use(require('./controllers/'));
 
