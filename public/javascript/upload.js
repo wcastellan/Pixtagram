@@ -1,3 +1,5 @@
+var document = require('global/document');
+
 document.addEventListener('DOMContentloaded', async () => {
   const response = await fetch('/api/upload');
   const data = await response.json();

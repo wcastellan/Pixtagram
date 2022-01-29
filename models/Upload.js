@@ -14,4 +14,4 @@ const Upload = () => {
         return { timestamp, signature }
     }
 
-module.exports = { Upload }
+module.exports = Upload;
