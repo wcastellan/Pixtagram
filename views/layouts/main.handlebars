@@ -20,8 +20,7 @@
       <nav class="navbar">
         {{#if loggedIn}}
         <input type="text" id="navbar-search" size="40" placeholder="Search accounts">
-        <a href="/upload">Upload</a>
-        <button id="upload_widget" class="cloudinary-button">Upload files</button>
+        <button id="upload_widget" class="cloudinary-button">Upload</button>
         <button class="btn" id="logout">Log Out</button>
         <div class="dropdown">
           <button class="dropbtn">...</button>
@@ -47,7 +46,9 @@
   <script type="text/javascript">  
     var myWidget = cloudinary.createUploadWidget({
       cloudName: 'dugddb4bt', 
-      uploadPreset: 'pixtagram'}, (error, result) => { 
+      uploadPreset: 'pixtagram'}, 
+      
+        (error, result) => { 
         if (!error && result && result.event === "success") { 
           console.log('Done! Here is the image info: ', result.info); 
         }
@@ -57,7 +58,7 @@
   document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
-</script>
+  </script>
   {{/if}}
 </body>
 
