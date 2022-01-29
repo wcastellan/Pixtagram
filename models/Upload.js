@@ -1,32 +1,17 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const cloudinary = require('cloudinary').v2;
+require('../public/javascript/upload');
+const apiSecret = cloudinary.config().api_secret;
 
-class Upload extends Model {}
+// server-side function used to sign an Uplad widget upload
+const Upload = () => {
+    const timestamp = Math.round((new Date).getTime()/1000);
 
-Upload.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        name: {
-            type: DataTypes.STRING,
-        },
-        avatar: {
-            type: DataTypes.STRING,
-        },
-        cloudinary_id: {
-            type: DataTypes.STRING,
-        }
-    },
-    {
-        sequelize,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'upload'
+    const signature = cloudinary.utils.api_sign_request({
+        timestamp: timestamp,
+        source: 'uw',
+        folder: 'sample'}, apiSecret);
+        
+        return { timestamp, signature }
     }
-);
 
-module.exports = Upload;
+module.exports = { Upload }
