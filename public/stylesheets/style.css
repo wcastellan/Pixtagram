@@ -37,6 +37,7 @@ ul, ol {
 
 .btn:hover {
   cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
 }
 
 
@@ -78,6 +79,13 @@ header {
   border: 1px solid lightslategray;
   padding: 5px;
 }
+
+.cloudinary-button {
+  height: 37px;
+  border: 1px solid blue;
+}
+
+
 
 /* Logout Button */
 #logout {
