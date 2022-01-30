@@ -27,7 +27,7 @@
   **Heroku**: https://fierce-journey-71940.herokuapp.com/
 
   ## Contribution:
-  Wyatt C. Micheal S. Wesley D.
+  Wyatt C. Michael S. Wesley D.
 
   ## Testing:
   No tests were written.

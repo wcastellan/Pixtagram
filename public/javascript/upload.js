@@ -1,30 +1,32 @@
-async function uploadFormHandler(event) {
-    event.preventDefault();
-  
-    const image = document.querySelector('img[name="image"]').value.trim();
-    const cloudinary_id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
-  
-    if (image) {
-      const response = await fetch('upload', {
-        method: 'POST',
-        body: JSON.stringify({
-          name,
-          avatar,
-          cloudinary_id
-        }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-  
-      if (response.ok) {
-        document.location.reload();
-      } else {
-        alert(response.statusText);
-      }
-    }
-}
-  
-document.querySelector('.upload-form').addEventListener('submit', uploadFormHandler);
+// var document = require('global/document');
+
+// document.addEventListener('DOMContentloaded', async () => {
+//   const response = await fetch('/api/upload');
+//   const data = await response.json();
+
+//   const options = {
+//     cloudName: data.cloudname,
+//     apiKey: data.apikey,
+//     uploadSignatureTimestamp: data.timestamp,
+//     uploadSignature: data.signature,
+//     cropping: false,
+//     folder: 'sample'
+//   }
+
+//   const processResults = (error, result) => {
+//     if (!error && result && result.event === 'success') {
+//       console.log(result)
+
+//       var str = JSON.stringify(result, null, 4);
+//       document.getElementById('sampledata').innerHTML += str;
+//     }
+//   }
+
+//   const myWidget = window.cloudinary.createUploadWidget(
+//     options,
+//     processResults
+//   )
+//   document
+//     .getElementById('#upload_widget')
+//     .addEventListener('click', () => myWidget.open(), false)
+// })

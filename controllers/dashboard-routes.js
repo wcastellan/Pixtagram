@@ -4,6 +4,10 @@ const { Post, User, Comment, Vote } = require('../models');
 const withAuth = require('../utils/auth');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
 // // get all users
 // router.get('/', (req, res) => {
 //   console.log('===========================')
@@ -48,6 +52,9 @@ router.get('/:id', (req, res) => {
   });
 });
 
+<<<<<<< HEAD
+=======
+>>>>>>> develop
 =======
 >>>>>>> develop
 // get all posts for dashboard
