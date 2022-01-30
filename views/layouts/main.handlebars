@@ -19,7 +19,7 @@
       </h1>
       <nav class="navbar">
         {{#if loggedIn}}
-        <input type="text" id="navbar-search" size="40" placeholder="Search accounts">
+        <input type="search" id="navbar-search" size="40" placeholder="Search accounts">
         <button id="upload_widget" class="cloudinary-button">Upload</button>
         <button class="btn" id="logout">Log Out</button>
         <div class="dropdown">
@@ -42,9 +42,6 @@
   </div>
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  
-  {{/if}}
-
   <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
   <script type="text/javascript">  
 
@@ -81,6 +78,7 @@
     }
     uploadEventHandler();
   </script>
+  {{/if}}
 </body>
 
 </html>
